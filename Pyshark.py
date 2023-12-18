@@ -2,7 +2,7 @@ import pyshark
 from datetime import datetime
  
 
-def layer_ip(file ='./http.pcap'):
+def layer_ip(file ='./2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
     pyshark_obj = pyshark.FileCapture(file, display_filter='ip')
     src_dst_proto_proto = {}
     source = []
