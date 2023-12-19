@@ -1,9 +1,8 @@
 import pyshark
-from datetime import datetime
- 
+
 
 def layer_ip(file ='./2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
-    pyshark_obj = pyshark.FileCapture(file, display_filter='ip')
+    pyshark_obj = pyshark.FileCapture(file)
     src_dst_proto_proto = {}
     source = []
     destination = []
@@ -13,7 +12,7 @@ def layer_ip(file ='./2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
        try:
             source.append(packet.ip.src)
             destination.append(packet.ip.dst)
-            protocol.append(packet.ip.proto)
+            protocol.append(packet.transport_layer)
        
        except: 
             continue
@@ -22,9 +21,4 @@ def layer_ip(file ='./2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
     src_dst_proto_proto['Destination'] = destination
     src_dst_proto_proto['Protocol'] = protocol
 
-    print(src_dst_proto_proto)
-
     return src_dst_proto_proto
-
-
-layer_ip()
