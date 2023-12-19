@@ -1,12 +1,12 @@
 import pyshark
 from datetime import datetime
+import csv
 
 def layer_ip(file ='./2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
     pyshark_obj = pyshark.FileCapture(file)
     src_dst = {}
     source = []
     destination = []
-    
     
     for packet in pyshark_obj:   
        try:
@@ -37,10 +37,26 @@ def protocol(file = './2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
        
 
 def epoch_time(file = './2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
+     time = {}
+     list_time = []
      pyshark_obj = pyshark.FileCapture(file)
-     for c in pyshark_obj:
-         epoch = float(c.frame_info.time_epoch)
-         date_time = datetime.fromtimestamp(epoch)
-         print(date_time)
-         input()
+     
+     for epoch_time in pyshark_obj:
+          date_time = epoch_time.frame_info.time[:-3].strip()
+          list_time.append(date_time)
+     time['Time'] = list_time
+
+     return time
+
+
+
+def main(file_name = './2023-12-15-TA577-Pikabot-infection-traffic.pcap'):
+
+
+
+
+
+
+
+
 
