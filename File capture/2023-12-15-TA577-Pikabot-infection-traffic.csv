@@ -1,4 +1,4 @@
-ip Source,ip Destination,Protocol,Epoch
+ip Source,ip Destination,Protocol,Time
 10.12.15.101,10.12.15.1,UDP,"Dec 15, 2023 13:01:57.557837000"
 10.12.15.1,10.12.15.101,UDP,"Dec 15, 2023 13:01:57.740658000"
 10.12.15.101,68.66.226.89,TCP,"Dec 15, 2023 13:01:57.741204000"
