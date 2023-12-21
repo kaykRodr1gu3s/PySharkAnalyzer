@@ -43,18 +43,19 @@ sudo apt install tshark
  
 ### Windows
 
-+ if you are on windows, you need to change the Network interface controller(NIC). For see the NIC names tables on cmd, use the command:
++ If you are on window s, you need to change the Network interface controller(NIC). For see the NIC names tables on cmd , use the command :
 
 ```bash
  wmic nic get name
 ```
 
 ### Linux
- 
 
++ If you are on Linux , you need to change the Network interface controller(NIC). For see the NIC names tables on terminal , use the command :
 
-
-
+```bash
+tshark -D
+```
 
 
 
