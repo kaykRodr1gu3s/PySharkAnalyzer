@@ -8,7 +8,7 @@ This project analyse and live capture your Network interface controller and save
 
 1 - [Pre-requirement](#pre-requirement)
 
-2 - [How to use](#How-to-use)
+2 - [Configuration](#configuration)
 
 
 ## Pre-requirement
@@ -39,9 +39,18 @@ sudo apt install tshark
 
 
 
+## Configuration
+ 
+### Windows
 
++ if you are on windows, you need to change the Network interface controller(NIC). For see the NIC names tables on cmd, use the command:
 
+```bash
+ wmic nic get name
+```
 
+### Linux
+ 
 
 
 
