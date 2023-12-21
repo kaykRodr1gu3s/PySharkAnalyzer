@@ -13,7 +13,7 @@ This project analyse and live capture your Network interface controller and save
 
 ## Pre-requirement
 
-The firts thing to do is install the pre-requirement : wireshark, tshark, pyshark and pandas
+The first thing to do is install the pre-requirement : wireshark, tshark, pyshark and pandas
 
 ### Windows 
   On windows, you need to install some application and some python libraries
@@ -48,7 +48,25 @@ sudo apt install tshark
 ```bash
  wmic nic get name
 ```
-
+```bash
+Name
+Microsoft Kernel Debug Network Adapter
+Qualcomm QCA61x4A 802.11ac Wireless Adapter
+Killer E2400 Gigabit Ethernet Controller
+Bluetooth Device (Personal Area Network)
+Microsoft Wi-Fi Direct Virtual Adapter
+Microsoft Wi-Fi Direct Virtual Adapter #2
+WAN Miniport (SSTP)
+WAN Miniport (IKEv2)
+WAN Miniport (L2TP)
+WAN Miniport (PPTP)
+WAN Miniport (PPPOE)
+WAN Miniport (IP)
+WAN Miniport (IPv6)
+WAN Miniport (Network Monitor)
+VirtualBox Host-Only Ethernet Adapter
+RAS Async Adapter
+```
 ### Linux
 
 + If you are on Linux , you need to change the Network interface controller(NIC). For see the NIC names tables on terminal , use the command :
@@ -57,8 +75,7 @@ sudo apt install tshark
 tshark -D
 ```
 
-
-
+You will see something like this. The NIC that you need is the first.
 
 
 
