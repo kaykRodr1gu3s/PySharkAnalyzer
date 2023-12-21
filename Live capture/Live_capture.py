@@ -4,6 +4,7 @@ import os
 
 class Live_capture_pyshark_and_parsing:
      def __init__(self):
+          
           os.chdir('./Live capture')
 
           self.pcap_name = "My_pcap.pcap"
