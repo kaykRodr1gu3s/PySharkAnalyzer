@@ -48,6 +48,7 @@ sudo apt install tshark
 ```bash
  wmic nic get name
 ```
+The return will be something like this
 ```bash
 Name
 Microsoft Kernel Debug Network Adapter
