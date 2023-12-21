@@ -9,9 +9,19 @@ This project analyse and live capture your Network interface controller and save
 
 1 - [How to install](#how-to-install)
 
-2 - [how to use](#how-to-use)
+2 - [How to use](#How-to-use)
 
 
-## Como instalar 
+## How to install
 
-The firts thing for do is install the pre-requirement: tshark, pandas
+The firts thing to do is install the pre-requirement : tshark and pandas
+
+```bash
+sudo apt install tshark
+```
+
+```python
+pip install pandas
+```
+
+## How to use
