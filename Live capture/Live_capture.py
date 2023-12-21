@@ -1,33 +1,49 @@
 import pyshark
 import pandas as pd
+import os
 
 class Live_capture_pyshark_and_parsing:
-     
      def __init__(self):
+          os.chdir('./Live capture')
+
           self.pcap_name = "My_pcap.pcap"
-          self.pyshark_obj = pyshark.FileCapture(self.live_capture_pcap())
+          self.live = self.live_capture_pcap('enp0s3') 
+          self.pyshark_obj = pyshark.FileCapture(f'./My_pcap.pcap')
           
-     def live_capture_pcap(self):
-          capture = pyshark.LiveCapture(interface='enp0s3', output_file=self.pcap_name)
+     def live_capture_pcap(self, NIC : str):
+          """"
+          This function will capture your Network interface controller and will create a PCAP file
+
+          NIC >>> Your Network interface controller
+          
+          example >>> enp0s3
+          """
+
+          capture = pyshark.LiveCapture(interface=NIC, output_file=f'{self.pcap_name}')
           print('Capturing the packets from your machine')
-          capture.sniff(timeout=5)
-          print("Pcap file has been created")
-          print(capture)
+          capture.sniff(timeout=3)
+          print(f"Pcap file has been created\n{capture}")
 
           return capture
      
      def layer_ip(self, file):
+          """"
+          This function will parser your PCAP file, the data that will be collected are: ip address and ip destination
+
+          file >>>  self.pyshark_obj 
+          """
           src_dst = []
           source = []
           destination = []
           
           for packet in file:   
                try:
-                    source.append(packet.ip.src)
-                    destination.append(packet.ip.dst)
-               
-               except: 
-                    continue
+                   source.append(packet.ip.src)
+                   destination.append(packet.ip.dst)
+               except AttributeError:
+                    print(f'No attribute found, adding None as attribute value')
+                    source.append(None)
+                    destination.append(None)
 
           source_dict = {'IP source': source}
           dst_dict = {'IP destination': destination}
@@ -39,6 +55,9 @@ class Live_capture_pyshark_and_parsing:
 
 
      def protocol(self, file):
+          """
+          This function will parser your PCAP file, the data that will be collected is: protocols          
+          """
           protocol = {}
           protocol_name = []
           
@@ -51,6 +70,9 @@ class Live_capture_pyshark_and_parsing:
           
 
      def epoch_time(self, file):
+          """
+          This function will parser your PCAP file, the data that will be collected is: Time
+          """
           time = {}
           list_time = []
           
@@ -65,20 +87,23 @@ class Live_capture_pyshark_and_parsing:
 
 
      def main(self):
-          self.live_capture_pcap()
+          """
+          This function will put all the outher function together
+          """
           pcap = self.pyshark_obj
           ips = self.layer_ip(pcap)
           protocols = self.protocol(pcap)
           epoch = self.epoch_time(pcap)
+
           all_data = {}
 
           all_data['ip Source'] = ips[0]['IP source']
           all_data['ip Destination'] = ips[1]['IP destination']
           all_data['Protocol'] = protocols['Protocol']
-          all_data['Epoch'] = epoch['Date']
-          
+          all_data['Time'] = epoch['Date']
+      
           df = pd.DataFrame(all_data)
-          df.to_csv(self.pcap_name, index=False)
+          df.to_csv('My_pcap.csv', index=False)
 
 
 File = Live_capture_pyshark_and_parsing()
