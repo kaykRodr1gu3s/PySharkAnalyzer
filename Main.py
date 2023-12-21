@@ -1,10 +1,21 @@
 import pyshark
 import pandas as pd
 
-class FileCapture_pyshark:
+class Live_capture_pyshark_and_parsing:
+     
      def __init__(self):
-          self.pyshark_obj = pyshark.FileCapture('./my_pcap.pcap')
-           
+          self.pcap_name = "My_pcap.pcap"
+          self.pyshark_obj = pyshark.FileCapture(self.live_capture_pcap())
+          
+     def live_capture_pcap(self):
+          capture = pyshark.LiveCapture(interface='enp0s3', output_file=self.pcap_name)
+          print('Capturing the packets from your machine')
+          capture.sniff(timeout=5)
+          print("Pcap file has been created")
+          print(capture)
+
+          return capture
+     
      def layer_ip(self, file):
           src_dst = []
           source = []
@@ -54,6 +65,7 @@ class FileCapture_pyshark:
 
 
      def main(self):
+          self.live_capture_pcap()
           pcap = self.pyshark_obj
           ips = self.layer_ip(pcap)
           protocols = self.protocol(pcap)
@@ -66,8 +78,8 @@ class FileCapture_pyshark:
           all_data['Epoch'] = epoch['Date']
           
           df = pd.DataFrame(all_data)
-          df.to_csv('pcap_content.csv', index=False)
+          df.to_csv(self.pcap_name, index=False)
 
 
-File = FileCapture_pyshark()
+File = Live_capture_pyshark_and_parsing()
 File.main()
