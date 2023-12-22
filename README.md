@@ -121,6 +121,9 @@ self.pyshark_obj = pyshark.FileCapture(f'./2023-12-15-TA577-Pikabot-infection-tr
 For example , i left the pcap 2023-12-15-TA577-Pikabot-infection-traffic.pcap, if you want to download the pcap, [click here](https://www.malware-traffic-analysis.net/2023/12/18/index.html).
 
 
+## Usage
+
+
 
 
 
