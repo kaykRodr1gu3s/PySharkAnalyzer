@@ -12,6 +12,8 @@ This project analyse and live capture your Network interface controller and save
 
 3 - [Live capture](#live-capture)
 
+4 - [File capture](#file-capture)
+
 
 ## Pre-requirement
 
@@ -104,6 +106,21 @@ Put your NIC on the code. For example , i put the enp0s3, you just need to put y
 ```python
 self.live = self.live_capture_pcap('enp0s3')
 ``` 
+
+---
+
+### File capture 
+
+If you want to read a pcap is easier than taking live capture. You just need to put the pcap file on same code directory.
+For example i left the pcap 
+
+
+
+
+
+
+
+
 
 
 
