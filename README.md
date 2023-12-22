@@ -156,20 +156,5 @@ In this example, i use the the ```2023-12-15-TA577-Pikabot-infection-traffic.csv
 ## Contact
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
++ Linkedin : https://www.linkedin.com/in/kayk-rodrigues-504a03273
++ Telegram : 
