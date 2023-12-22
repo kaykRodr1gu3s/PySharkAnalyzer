@@ -149,14 +149,15 @@ In this example, i use the the ```2023-12-15-TA577-Pikabot-infection-traffic.csv
 
 
 ## how to contribute
- + Clone the repository
- + Try to upgrade the code
- + Make the pull request
+ 1. Fork the repository.
+ 2. Create a branch for your contribution: `git checkout -b feature-nova`.
+ 3. Make the desired changes and commit: `git commit -m "Add new functionality"`.
+ 4. Push to your branch: `git push origin new-feature`.
+ 5. Open a pull request.
 
 
 
 ## Contact
 
-
-+ Linkedin : https://www.linkedin.com/in/kayk-rodrigues-504a03273
-+ Telegram : https://t.me/kaykRodrigues
+- Linkedin: [Kayk Rodrigues](https://www.linkedin.com/in/kayk-rodrigues-504a03273)
+- Telegram: [Kayk Rodrigues](https://t.me/kaykRodrigues)
