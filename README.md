@@ -10,6 +10,8 @@ This project analyse and live capture your Network interface controller and save
 
 2 - [Configuration](#configuration)
 
+3 - [Live capture](#live-capture)
+
 
 ## Pre-requirement
 
@@ -40,10 +42,12 @@ sudo apt install tshark
 
 
 ## Configuration
- 
-### Windows
 
-+ If you are on window s, you need to change the Network interface controller(NIC). For see the NIC names tables on cmd , use the command :
+### Live capture
+
+#### Windows
+ 
++ If you are on windows, you need to change the Network interface controller(NIC). For see the NIC names tables on cmd , use the command :
 
 ```bash
  wmic nic get name
@@ -68,7 +72,7 @@ WAN Miniport (Network Monitor)
 VirtualBox Host-Only Ethernet Adapter
 RAS Async Adapter
 ```
-### Linux
+#### Linux
 
 + If you are on Linux , you need to change the Network interface controller(NIC). For see the NIC names tables on terminal , use the command :
 
@@ -95,6 +99,11 @@ tshark -D
 
 ---
 
+
+Put your NIC on the code. For example , i put the enp0s3, you just need to put your!
+```python
+self.live = self.live_capture_pcap('enp0s3')
+``` 
 
 
 
