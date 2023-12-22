@@ -129,6 +129,20 @@ df.to_csv('My_pcap.csv', index=False)
 ```
 The csv name is the string 'My_pcap.csv'. If you want outher name, just eraise the 'My_pcap.pcap' put your name and run the code.
 
+### File capture
+
+The code [File capture](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/tree/main/File%20capture), it's possible to change the pcap file and csv name. For change the pcap file just put the pcap on the same directory and change the pcap file name  on the code
+```python
+self.pyshark_obj = pyshark.FileCapture(f'./2023-12-15-TA577-Pikabot-infection-traffic.pcap')
+```
+The pcap name that i use as example is ```2023-12-15-TA577-Pikabot-infection-traffic.pcap``` , put your pcap name that are on the directory
+
+For change the csv name, change the string name
+```python
+df.to_csv('2023-12-15-TA577-Pikabot-infection-traffic.csv', index=False)
+```
+In this example, i use the the ```2023-12-15-TA577-Pikabot-infection-traffic.csv``` as example, just eraise and put your csv name
+
 
 
 
