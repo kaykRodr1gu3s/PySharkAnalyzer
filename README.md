@@ -122,7 +122,12 @@ For example , i left the pcap 2023-12-15-TA577-Pikabot-infection-traffic.pcap, i
 
 
 ## Usage
-
+### Live capture
+For the code work, on the [Live capture](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/tree/main/Live%20capture) you just need to configure the NIC , read the [Live capture configuration](#live-capture). Is possible you change the CSV name that will be generated just change the code
+```python 
+df.to_csv('My_pcap.csv', index=False)
+```
+The csv name is the string 'My_pcap.csv'. If you want outher name, just eraise the 'My_pcap.pcap' put your name and run the code.
 
 
 
