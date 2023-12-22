@@ -15,6 +15,8 @@ This project analyse and live capture your Network interface controller and save
 4 - [File capture](#file-capture)
 
 5 - [Usage](#usage)
+
+6 - [Contact](#contact)
 ## Pre-requirement
 
 The first thing to do is install the pre-requirement : wireshark, tshark, pyshark and pandas
@@ -157,4 +159,4 @@ In this example, i use the the ```2023-12-15-TA577-Pikabot-infection-traffic.csv
 
 
 + Linkedin : https://www.linkedin.com/in/kayk-rodrigues-504a03273
-+ Telegram : 
++ Telegram : https://t.me/kaykRodrigues
