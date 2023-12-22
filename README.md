@@ -14,7 +14,7 @@ This project analyse and live capture your Network interface controller and save
 
 4 - [File capture](#file-capture)
 
-
+5 - [Usage](#usage)
 ## Pre-requirement
 
 The first thing to do is install the pre-requirement : wireshark, tshark, pyshark and pandas
@@ -127,7 +127,7 @@ For the code work, on the [Live capture](https://github.com/kaykRodr1gu3s/PyShar
 ```python 
 df.to_csv('My_pcap.csv', index=False)
 ```
-The csv name is the string 'My_pcap.csv'. If you want outher name, just eraise the 'My_pcap.pcap' put your name and run the code.
+The csv name is the ```My_pcap.csv```. If you want outher name, just eraise the 'My_pcap.pcap' put your name and run the code.
 
 ### File capture
 
@@ -135,7 +135,7 @@ The code [File capture](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/tree/ma
 ```python
 self.pyshark_obj = pyshark.FileCapture(f'./2023-12-15-TA577-Pikabot-infection-traffic.pcap')
 ```
-The pcap name that i use as example is ```2023-12-15-TA577-Pikabot-infection-traffic.pcap``` , put your pcap name that are on the directory
+The pcap name that i use as example is ```2023-12-15-TA577-Pikabot-infection-traffic.pcap``` , put your pcap name that are on the directory.
 
 For change the csv name, change the string name
 ```python
@@ -143,6 +143,17 @@ df.to_csv('2023-12-15-TA577-Pikabot-infection-traffic.csv', index=False)
 ```
 In this example, i use the the ```2023-12-15-TA577-Pikabot-infection-traffic.csv``` as example, just eraise and put your csv name
 
+
+
+
+## how to contribute
+ + Clone the repository
+ + Try to upgrade the code
+ + Make the pull request
+
+
+
+## Contact
 
 
 
