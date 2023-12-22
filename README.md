@@ -75,8 +75,26 @@ RAS Async Adapter
 ```bash
 tshark -D
 ```
+```bash
+1. enp0s3
+2. any
+3. lo (Loopback)
+4. bluetooth-monitor
+5. nflog
+6. nfqueue
+7. dbus-system
+8. dbus-session
+9. ciscodump (Cisco remote capture)
+10. dpauxmon (DisplayPort AUX channel monitor capture)
+11. randpkt (Random packet generator)
+12. sdjournal (systemd Journal Export)
+13. sshdump (SSH remote capture)
+14. udpdump (UDP Listener remote capture)
+```
 
-You will see something like this. The NIC that you need is the first.
+
+---
+
 
 
 
