@@ -8,7 +8,7 @@ class Live_capture_pyshark_and_parsing:
           os.chdir('./Live capture')
 
           self.pcap_name = "My_pcap.pcap"
-          self.live = self.live_capture_pcap('enp0s3') 
+          self.live = self.live_capture_pcap('Qualcomm QCA61x4A 802.11ac Wireless Adapter') 
           self.pyshark_obj = pyshark.FileCapture(f'./My_pcap.pcap')
           
      def live_capture_pcap(self, NIC : str):
