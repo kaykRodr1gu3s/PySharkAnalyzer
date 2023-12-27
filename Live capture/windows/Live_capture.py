@@ -106,7 +106,7 @@ class Live_capture_pyshark_and_parsing:
           all_data['Time'] = epoch['Date']
       
           df = pd.DataFrame(all_data)
-          df.to_csv('Windows.csv', index=False)
+          df.to_csv('My_pcap.csv', index=False)
 
 
 File = Live_capture_pyshark_and_parsing()
