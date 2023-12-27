@@ -51,31 +51,15 @@ sudo apt install tshark
 
 #### Windows
  
-+ If you are on windows, you need to change the Network interface controller(NIC). For see the NIC names tables on cmd , use the command :
++ If you are on windows, you need to change the interface. For see all the interface available, open the Wireshark application. you will see something like this:
 
 ```bash
- wmic nic get name
+Wi-fi
+Ethernet 
+Adapter for loopback traffic capture
 ```
-The return will be something like this
-```bash
-Name
-Microsoft Kernel Debug Network Adapter
-Qualcomm QCA61x4A 802.11ac Wireless Adapter
-Killer E2400 Gigabit Ethernet Controller
-Bluetooth Device (Personal Area Network)
-Microsoft Wi-Fi Direct Virtual Adapter
-Microsoft Wi-Fi Direct Virtual Adapter #2
-WAN Miniport (SSTP)
-WAN Miniport (IKEv2)
-WAN Miniport (L2TP)
-WAN Miniport (PPTP)
-WAN Miniport (PPPOE)
-WAN Miniport (IP)
-WAN Miniport (IPv6)
-WAN Miniport (Network Monitor)
-VirtualBox Host-Only Ethernet Adapter
-RAS Async Adapter
-```
+
+
 #### Linux
 
 + If you are on Linux , you need to change the Network interface controller(NIC). For see the NIC names tables on terminal , use the command :
@@ -125,11 +109,16 @@ For example , i left the pcap 2023-12-15-TA577-Pikabot-infection-traffic.pcap, i
 
 ## Usage
 ### Live capture
+
 For the code work, on the [Live capture](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/tree/main/Live%20capture) you just need to configure the NIC , read the [Live capture configuration](#live-capture). Is possible you change the CSV name that will be generated just change the code
 ```python 
 df.to_csv('My_pcap.csv', index=False)
 ```
 The csv name is the ```My_pcap.csv```. If you want outher name, just eraise the 'My_pcap.pcap' put your name and run the code.
+
+You can capture outher interface outher like the Wi-fi, you can see all the interface on wireshark interface.
+
+
 
 ### File capture
 
