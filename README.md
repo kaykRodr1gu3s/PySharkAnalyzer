@@ -51,7 +51,7 @@ sudo apt install tshark
 
 #### Windows
 
-  In windows code, i left the Adapter for loopback traffic capture  interface . You can change the interface, for you see an example go to [USAGE](#usage)
+  In windows code you must execute your IDE as administrator, i left the Adapter for loopback traffic capture  interface . You can change the interface, for you see an example go to [USAGE](#usage)
  
 
 #### Linux
