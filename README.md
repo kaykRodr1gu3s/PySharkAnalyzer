@@ -49,6 +49,18 @@ sudo apt install tshark
 
 ### Live capture
 
+If you want to capture outher interface, open the wireshark application. You will see something like this:
+
+![339862_340003_common_13130_01](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/assets/110197812/253e771d-5c3f-4a9a-b6d2-efc83b4131a7)
+
+
+in the example below, i will put the wi-fi interface:
+```python
+self.live = self.live_capture_pcap('Wi-fi')
+```
+
+i change the ```self.live = self.live_capture_pcap('Adapter for loopback traffic capture')``` to ```self.live = self.live_capture_pcap('Wi-fi')```
+
 #### Windows
 
   In windows code you must execute your IDE as administrator, i left the Adapter for loopback traffic capture  interface . You can change the interface, for you see an example go to [USAGE](#usage)
@@ -103,18 +115,15 @@ For example , i left the pcap 2023-12-15-TA577-Pikabot-infection-traffic.pcap, i
 
 ## Usage
 ### Live capture
-If you want to capture outher interface, open the wireshark application. You will see something like this:
 
-![339862_340003_common_13130_01](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/assets/110197812/253e771d-5c3f-4a9a-b6d2-efc83b4131a7)
+You can change the pcap that will be generated, just change this code line:
 
-in the example below, i will put the wi-fi interface:
 ```python
-self.live = self.live_capture_pcap('Wi-fi')
+  self.pcap_name = "Pcap_Name.pcap"
 ```
+In both code it's possible to change. On linux code the code line will be ```self.pcap_name = "Linux.pcap"``` and the windows will be ```self.pcap_name = "Windows.pcap"```
 
-i change the ```self.live = self.live_capture_pcap('Adapter for loopback traffic capture')``` to ```self.live = self.live_capture_pcap('Wi-fi')```
-
-For the code work very well, on the [Live capture](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/tree/main/Live%20capture) you just need to configure the NIC , read the [Live capture configuration](#live-capture). 
+For the code work very well, on the [Live capture](https://github.com/kaykRodr1gu3s/PySharkAnalyzer/tree/main/Live%20capture) you just need to configure the interface , read the [Live capture configuration](#live-capture). 
 
 It is possible you change the CSV name that will be generated just change the code
 ```python 
