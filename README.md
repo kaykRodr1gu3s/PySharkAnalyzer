@@ -19,7 +19,7 @@ This project analyse and live capture your Network interface controller and save
 6 - [Contact](#contact)
 ## Requirements
 
-The first thing to do is install the pre-requirement : wireshark, tshark, pyshark and pandas
+The first thing to do is install the requirements : wireshark, tshark, pyshark and pandas
 
 ### Windows 
   On windows, you need to install some application and some python libraries
