@@ -6,7 +6,7 @@ This project analyse and live capture your Network interface controller and save
 
 ## Index
 
-1 - [Pre-requirement](#pre-requirement)
+1 - [Requirements](#requirements)
 
 2 - [Configuration](#configuration)
 
@@ -17,7 +17,7 @@ This project analyse and live capture your Network interface controller and save
 5 - [Usage](#usage)
 
 6 - [Contact](#contact)
-## Pre-requirement
+## Requirements
 
 The first thing to do is install the pre-requirement : wireshark, tshark, pyshark and pandas
 
