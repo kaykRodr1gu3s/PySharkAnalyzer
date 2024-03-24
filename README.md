@@ -16,6 +16,8 @@ This project analyse and live capture your Network interface controller and save
 
 5 - [Usage](#usage)
 
+6 - [how to contribute](#how-to-contribute)
+
 6 - [Contact](#contact)
 ## Requirements
 
@@ -164,4 +166,4 @@ In this example, i use the the ```2023-12-15-TA577-Pikabot-infection-traffic.csv
 ## Contact
 
 - Linkedin: [Kayk Rodrigues](https://www.linkedin.com/in/kayk-rodrigues-504a03273)
-- Telegram: [Kayk Rodrigues](https://t.me/kaykRodrigues)
+
