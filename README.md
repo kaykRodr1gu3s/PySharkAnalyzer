@@ -18,7 +18,9 @@ This project analyse and live capture your Network interface controller and save
 
 6 - [how to contribute](#how-to-contribute)
 
-6 - [Contact](#contact)
+7 - [Contact](#contact)
+
+
 ## Requirements
 
 The first thing to do is install the requirements : wireshark, tshark, pyshark and pandas
